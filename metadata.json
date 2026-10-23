@@ -1,0 +1,6 @@
+{
+  "name": "OmniLearn AI - Accessible & Offline AI/ML Skills",
+  "description": "Free, accessible AI & Machine Learning learning platform featuring personalized pathways, offline-first study modes for remote areas, assistive accessibility tools, and intelligent retention feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

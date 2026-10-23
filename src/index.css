@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  /* High visibility focus ring for accessibility */
+  :focus-visible {
+    outline: 3px solid #38bdf8 !important;
+    outline-offset: 3px !important;
+  }
+
+  /* Dyslexia-friendly typography mode */
+  .font-dyslexic {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', 'Verdana', sans-serif !important;
+    letter-spacing: 0.06em !important;
+    word-spacing: 0.12em !important;
+    line-height: 1.8 !important;
+  }
+
+  /* High Contrast Dark Mode */
+  .theme-high-contrast-dark {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  .theme-high-contrast-dark * {
+    border-color: #4b5563;
+  }
+
+  /* High Contrast Light Mode */
+  .theme-high-contrast-light {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .theme-high-contrast-light * {
+    border-color: #9ca3af;
+  }
+
+  /* Warm Amber / Eye-Strain Reduction */
+  .theme-warm-amber {
+    background-color: #1a1612 !important;
+    color: #fef3c7 !important;
+  }
+
+  /* Text Scaling */
+  html.text-scale-100 {
+    font-size: 16px;
+  }
+  html.text-scale-125 {
+    font-size: 19px;
+  }
+  html.text-scale-150 {
+    font-size: 22px;
+  }
+
+  /* Reduced Motion */
+  .reduce-motion * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

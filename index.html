@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>OmniLearn AI - Accessible &amp; Offline AI/ML Skills</title>
+    <meta name="description" content="Free, accessible AI &amp; Machine Learning learning platform featuring personalized pathways, offline-first study modes for remote areas, assistive accessibility tools, and intelligent retention feedback." />
+    
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="OmniLearn AI - Accessible &amp; Offline AI/ML Skills" />
+    <meta property="og:description" content="Free, accessible AI &amp; Machine Learning learning platform featuring personalized pathways, offline-first study modes for remote areas, assistive accessibility tools, and intelligent retention feedback." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA & Mobile Web Capabilities -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="OmniLearn" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <script>
+      // Gracefully ignore benign Vite HMR WebSocket disconnect messages in embedded preview environment
+      window.addEventListener('error', function (event) {
+        if (event.message && (event.message.indexOf('WebSocket') !== -1 || event.message.indexOf('closed without opened') !== -1)) {
+          event.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('unhandledrejection', function (event) {
+        var msg = (event.reason && (event.reason.message || String(event.reason))) || '';
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('closed without opened') !== -1) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
